@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetal AI Data Collection Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #0056b3;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #004494;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CTG Report Data Collection</h1>
+        <nav>
+            <a href="/" class="nav-link">Home</a>
+            <a href="{{ url_for('fetal_development') }}" class="nav-link">Fetal Development</a>
+            <a href="{{ url_for('pregnancy_care') }}" class="nav-link">Pregnancy Care</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Fetal Wellbeing Data Collection Form</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="baseline_value">Baseline Value:</label>
+            <input type="text" id="baseline_value" name="baseline_value" required>
+
+            <label for="accelerations">Accelerations:</label>
+            <input type="text" id="accelerations" name="accelerations" required>
+
+            <label for="fetal_movement">Fetal Movement:</label>
+            <input type="text" id="fetal_movement" name="fetal_movement" required>
+
+            <label for="uterine_contractions">Uterine Contractions:</label>
+            <input type="text" id="uterine_contractions" name="uterine_contractions" required>
+
+            <label for="light_decelerations">Light Decelerations:</label>
+            <input type="text" id="light_decelerations" name="light_decelerations" required>
+
+            <label for="severe_decelerations">Severe Decelerations:</label>
+            <input type="text" id="severe_decelerations" name="severe_decelerations" required>
+
+            <label for="prolongued_decelerations">Prolongued Decelerations:</label>
+            <input type="text" id="prolongued_decelerations" name="prolongued_decelerations" required>
+
+            <label for="abnormal_short_term_variability">Abnormal Short Term Variability:</label>
+            <input type="text" id="abnormal_short_term_variability" name="abnormal_short_term_variability" required>
+
+            <label for="mean_value_of_short_term_variability">Mean Value of Short Term Variability:</label>
+            <input type="text" id="mean_value_of_short_term_variability" name="mean_value_of_short_term_variability" required>
+
+            <label for="percentage_of_time_with_abnormal_long_term_variability">Percentage of Time with Abnormal Long Term Variability:</label>
+            <input type="text" id="percentage_of_time_with_abnormal_long_term_variability" name="percentage_of_time_with_abnormal_long_term_variability" required>
+
+            <label for="mean_value_of_long_term_variability">Mean Value of Long Term Variability:</label>
+            <input type="text" id="mean_value_of_long_term_variability" name="mean_value_of_long_term_variability" required>
+
+            <label for="histogram_width">Histogram Width:</label>
+            <input type="text" id="histogram_width" name="histogram_width" required>
+
+            <label for="histogram_min">Histogram Min:</label>
+            <input type="text" id="histogram_min" name="histogram_min" required>
+
+            <label for="histogram_max">Histogram Max:</label>
+            <input type="text" id="histogram_max" name="histogram_max" required>
+
+            <label for="histogram_number_of_peaks">Histogram Number of Peaks:</label>
+            <input type="text" id="histogram_number_of_peaks" name="histogram_number_of_peaks" required>
+
+            <label for="histogram_number_of_zeroes">Histogram Number of Zeroes:</label>
+            <input type="text" id="histogram_number_of_zeroes" name="histogram_number_of_zeroes" required>
+
+            <label for="histogram_mode">Histogram Mode:</label>
+            <input type="text" id="histogram_mode" name="histogram_mode" required>
+
+            <label for="histogram_median">Histogram Median:</label>
+            <input type="text" id="histogram_median" name="histogram_median" required>
+
+            <label for="histogram_variance">Histogram Variance:</label>
+            <input type="text" id="histogram_variance" name="histogram_variance" required>
+
+            <label for="histogram_tendency">Histogram Tendency:</label>
+            <input type="text" id="histogram_tendency" name="histogram_tendency" required>
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

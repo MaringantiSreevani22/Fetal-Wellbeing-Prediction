@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Report - Fetal AI Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f8fd;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #0056b3;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #004494;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .output-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .output-box h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .output-box p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>View Report - Fetal AI Project</h1>
+    </header>
+
+    <div class="container">
+        <div class="output-box">
+            <h2>Fetal Development Stage: Pathological Findings</h2>
+            <p>"Pathological" findings indicate potential abnormalities or complications in fetal development. If your results show "Pathological" signs, immediate attention is required to ensure the health of both mother and baby. Common pathological conditions include:</p>
+
+            <ul>
+                <li><strong>Intrauterine Growth Restriction (IUGR)</strong><br>Signs: Decreased fetal movement, low amniotic fluid<br>Risks: Premature birth, low birth weight</li>
+                <li><strong>Fetal Distress</strong><br>Signs: Abnormal fetal heart rate, reduced movement<br>Risks: Stillbirth, premature birth</li>
+                <li><strong>Placental Abruption</strong><br>Signs: Abdominal pain, vaginal bleeding<br>Risks: Premature birth, neonatal complications</li>
+                <li><strong>Oligohydramnios (Low Amniotic Fluid)</strong><br>Signs: Low fluid levels, limited fetal movement<br>Risks: Premature rupture of membranes, birth defects</li>
+                <li><strong>Preterm Labor</strong><br>Signs: Regular contractions, pelvic pressure<br>Risks: Premature birth, developmental delays</li>
+                <li><strong>Infections</strong><br>Signs: Fever, unusual discharge<br>Risks: Preterm labor, low birth weight</li>
+            </ul>
+
+            <h3>What to Do:</h3>
+            <ul>
+                <li>Consult a healthcare provider for further testing and care.</li>
+                <li>Monitor fetal health with ultrasounds and stress tests.</li>
+                <li>Follow prescribed treatments to manage conditions and reduce risks.</li>
+            </ul>
+
+        </div>
+
+        <a href="{{ url_for('home') }}" class="button">Go Back to Home</a>
+    </div>
+</body>
+</html>
